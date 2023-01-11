@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-6">
+            <form #randomForm="ngForm" (ngSubmit)="onSubmit(randomForm)">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input class="form-control" type="text" name="name" id="name" ngModel>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input class="form-control" type="number" name="age" id="age" ngModel>
+                </div>
+                <div class="mb-3">
+                    <label for="school" class="form-label">School</label>
+                    <textarea class="form-control" name="school" id="school" cols="30" rows="10" ngModel></textarea>
+                </div>
+                <br>
+                <div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
