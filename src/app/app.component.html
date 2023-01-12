@@ -1,7 +1,13 @@
-<h2>Reactive form</h2>
-<app-hello-world></app-hello-world>
+<button [(ngModel)]="toggle" (click)="toggle = !toggle" ngDefaultControl>Switch Form</button>
+
+<div *ngIf="toggle; else tdform">
+    <h2>Reactive form</h2>
+    <app-hello-world></app-hello-world>
+</div>
 <br>
 <hr>
 <br>
-<!-- <h2>Template driven form</h2>
-<app-td-form></app-td-form> -->
+<ng-template #tdform>
+    <h2>Template driven form</h2>
+    <app-td-form></app-td-form>
+</ng-template>
