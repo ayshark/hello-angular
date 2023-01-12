@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class TdFormComponent {
 
+  // name: string = '';
+
   onSubmit(formValue: NgForm) {
     console.log(formValue.value)
   }

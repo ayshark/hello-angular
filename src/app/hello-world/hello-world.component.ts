@@ -16,12 +16,16 @@ export class HelloWorldComponent implements OnInit{
     profile: new FormControl(''),
   });
 
-  preview: string = '';
+  preview: string = 'aysha';
 
   ngOnInit(): void {}
 
   save() {
-    this.preview = JSON.stringify(this.newForm.value)
+    // this.preview = JSON.stringify(this.newForm.value)
+  }
+
+  twoWay(data: Event) {
+    this.preview = (<HTMLInputElement>data.target).value;
   }
   
 }
